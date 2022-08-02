@@ -10,6 +10,8 @@ const theme = {
     background: "transparent"
   }
 }
+
+//23:30
 const App =() => {
   return (
     <NavigationContainer>
