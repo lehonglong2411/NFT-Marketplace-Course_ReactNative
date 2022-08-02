@@ -1,17 +1,26 @@
 import { createStackNavigator } from '@react-navigation/stack';
-import { StyleSheet, Text, View } from 'react-native';
-import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
-native';
+import { NavigationContainer, DefaultTheme, StackActions } from '@react-navigation/native'; 
 import { useFonts } from 'expo-font';
-
-
-export default function App() {
+import { ImageBackground } from 'react-native';
+const Stack = createStackNavigator();
+const theme = {
+  ...DefaultTheme,
+  colors: {
+    ...DefaultTheme.colors,
+    background: "transparent"
+  }
+}
+const App =() => {
   return (
-    <View >
-      <Text>Hello world 3</Text>
-      
-    </View>
+    <NavigationContainer>
+      <StackNavigator>
+        <Stack.Screen>
+
+        </Stack.Screen>
+      </StackNavigator>
+    </NavigationContainer>
+    
   );
 }
 
-
+export default App;
