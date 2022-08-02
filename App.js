@@ -6,10 +6,11 @@ import { useFont } from './screen';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Hello world 3</Text>
-      
-    </View>
+    <NavigationContainer>
+      <StackNavigator>
+
+      </StackNavigator>
+    </NavigationContainer>
   );
 }
 
