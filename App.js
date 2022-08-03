@@ -3,8 +3,10 @@ import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { useFont } from './screen';
 
-const Stack = createStackNavigator();
+import Home from './screens/Home'
+import Details from './screens/Details'
 
+const Stack = createStackNavigator();
 const theme = {
   ...DefaultTheme,
   colors: {
