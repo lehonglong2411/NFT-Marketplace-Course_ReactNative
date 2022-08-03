@@ -5,14 +5,24 @@ import { useFont } from './screen';
 
 const Stack = createStackNavigator();
 
-export default function App() {
+const theme = {
+  ...DefaultTheme,
+  colors: {
+    ...DefaultTheme.colors,
+    background: "transparent"
+  }
+}
+const App = () => {
   return (
-    <NavigationContainer>
-      <StackNavigator>
+    <NavigationContainer theme = {theme}>
+      <Stack.Navigator screenOptions = {{headerShown: false} initialRouteName = "Home"}>
+        <Stack.Screen name = "Home" component = {Home} />
 
-      </StackNavigator>
+        <Stack.Screen name = "Details" component = {Details} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }
 
+export default App;
 
