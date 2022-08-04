@@ -1,7 +1,8 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer, DefaultTheme, StackActions } from '@react-navigation/native'; 
 import { useFonts } from 'expo-font';
-import { ImageBackground } from 'react-native';
+import Home from './screens/Home';
+import Details from './screens/Details';
 const Stack = createStackNavigator();
 const theme = {
   ...DefaultTheme,
@@ -11,16 +12,15 @@ const theme = {
   }
 }
 
-//23:30
 const App =() => {
   return (
-    <NavigationContainer>
-      <StackNavigator>
-        <Stack.Screen>
+    <NavigationContainer theme={theme}>
+      <Stack.Navigator screenOptions={{ headerShown: false}} initialRouteName="Home">
+        <Stack.Screen name= "Home" component={Home} />
 
-        </Stack.Screen>
-      </StackNavigator>
-    </NavigationContainer>
+        <Stack.Screen name="Details" component={Details} />
+      </Stack.Navigator>
+    </ NavigationContainer>
     
   );
 }
