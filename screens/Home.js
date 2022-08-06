@@ -12,12 +12,27 @@ const Home = () => {
       <View style={{zIndex: 0}}>
         <FlatList
         data={NFTData} 
-        renderItem={({ item }) => <Text>{item}</Text>
+        renderItem={({ item}) => <Text>{item.name}</Text>}
+        keyExtractor={(item) => item.id}
+        showsHorizontalScrollIndicator={false}
+        ListHeaderComponent={<HomeHeader />}
         />
 
       </View>
+      <View style={{
+        position: "abolute",
+        top: 0,
+        bottom: 0,
+        right: 0,
+        left: 0,
+        zIndex: -1, 
+      }}>
+        <View style={{height:300, backgroundColor: COLORS.primary}}
+        />
+        <View style={{ flex: 1, backgroundColor: COLORS.white}} />
 
-     </View>
+      </View>
+      </View>
     </SafeAreaView>
   )
 }
