@@ -12,7 +12,7 @@ const Home = () => {
       <View style={{zIndex: 0}}>
         <FlatList
         data={NFTData} 
-        renderItem={({ item}) => <Text>{item.name}</Text>}
+        renderItem={({ item }) => <NFTCard data= {item} />}
         keyExtractor={(item) => item.id}
         showsHorizontalScrollIndicator={false}
         ListHeaderComponent={<HomeHeader />}
@@ -27,7 +27,7 @@ const Home = () => {
         left: 0,
         zIndex: -1, 
       }}>
-        <View style={{height:300, backgroundColor: COLORS.primary}}
+        <View style={{height: 300, backgroundColor: COLORS.primary}}
         />
         <View style={{ flex: 1, backgroundColor: COLORS.white}} />
 
