@@ -12,7 +12,7 @@ const NFTCard = ({ data }) => {
       margin: SIZES.base,
       ...SHADOWS.dark
     }}>
-      <Text>NFTCard</Text>
+      <Text>NFT Card Heer</Text>
     </View>
   )
 }
