@@ -31,29 +31,28 @@ export const CircleButton = ( {imgUrl, handlePress, ...props}) => {
 }
 
 
-export const RectButton = ({imgUrl, handlePress, ...props}) => {
+export const RectButton = ({minWidth, fontSize, handlePress, ...props}) => {
     return (
       <TouchableOpacity 
         style = {{ 
-            width: 40,
-            height: 40,
-           backgroundColor: COLORS.white,
-           position: 'absolute',
+           backgroundColor: COLORS.primary,
+     
            borderRadius: SIZES.extraLarge,
-           alignItems: 'center',
-           justifyContent: 'center',
-           ...SHADOWS.light,
-           ...props,
+           minWidth: minWidth,
+           padding:SIZES.small,
+         
            
         }}
         onPress={handlePress}
     >
-        <Image 
-            source = {imgUrl}
-            resizeMode = "contain"
-            style = {{ position: "absolute", width: 24, height: 24, bottom: 0, right: 0}}
-        />
-        <Text>Place a bid</Text>
+        
+        <Text style = {{
+          fontFamily: FONTS.semiBold,
+          fontSize: fontSize,
+          color: COLORS.white,
+          textAlign: 'center',
+
+        }}>Place a bid</Text>
     </TouchableOpacity>
     )
   }

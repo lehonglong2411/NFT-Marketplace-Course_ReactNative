@@ -44,6 +44,7 @@ const NFTCard = ( {data} ) => {
 
         <View style = {{
           marginTop: SIZES.font,
+          display: "flex",
           flexDirection: "row",
           justifyContent: "space-between",
           alignItems: 'center',
